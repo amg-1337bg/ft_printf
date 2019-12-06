@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "ft_printf.h"
 
 int		hm_word(char const *s, char c)
 {

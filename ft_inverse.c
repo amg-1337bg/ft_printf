@@ -10,24 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 char    *ft_inverse(char *str)
 {
     char *res;
-    size_t i;
+    int i;
     int j;
 
     j = 0;
     i = ft_strlen(str);
     res = (char*)malloc(i + 1);
+    res[i] = '\0';
     i--;
-    while (i > 0)
+    while (i >= 0)
     {
         res[j] = str[i];
         j++;
         i--;
     }
-    res[j] = '\0';
     return(res);
 }
