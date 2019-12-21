@@ -6,7 +6,7 @@
 /*   By: bamghoug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 11:45:24 by bamghoug          #+#    #+#             */
-/*   Updated: 2019/11/01 16:55:45 by bamghoug         ###   ########.fr       */
+/*   Updated: 2019/12/18 12:29:46 by bamghoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ char	*if_neg(int n)
 		n = n / 10;
 		i++;
 	}
-	c = (char*)malloc((i + 2) * sizeof(char));
-	if (c == NULL)
+	if ((c = (char*)malloc((i + 2) * sizeof(char))) == NULL)
 		return (NULL);
 	i--;
 	c[i + 2] = '\0';
@@ -43,10 +42,10 @@ char	*if_neg(int n)
 
 char	*if_pos(int n)
 {
-	char	*c;
+	char			*c;
 	unsigned int	num;
-	int		i;
-	int		j;
+	int				i;
+	int				j;
 
 	num = (unsigned int)n;
 	i = 0;
@@ -55,8 +54,7 @@ char	*if_pos(int n)
 		n = n / 10;
 		i++;
 	}
-	c = (char*)malloc((i + 1) * sizeof(char));
-	if (c == NULL)
+	if ((c = (char*)malloc((i + 1) * sizeof(char))) == NULL)
 		return (NULL);
 	i--;
 	j = i + 1;
@@ -76,8 +74,7 @@ char	*ft_itoa(int n)
 
 	if (n >= 0 && n <= 9)
 	{
-		c = (char*)malloc(2 * sizeof(char));
-		if (c == NULL)
+		if ((c = (char*)malloc(2 * sizeof(char))) == NULL)
 			return (NULL);
 		c[0] = n + '0';
 		c[1] = '\0';

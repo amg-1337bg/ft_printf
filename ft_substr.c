@@ -6,7 +6,7 @@
 /*   By: bamghoug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 19:03:40 by bamghoug          #+#    #+#             */
-/*   Updated: 2019/10/29 11:01:10 by bamghoug         ###   ########.fr       */
+/*   Updated: 2019/12/18 15:09:04 by bamghoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*p;
-	unsigned char	*ptr;
-	int				i;
+	char	*p;
+	char	*ptr;
+	int		i;
 
 	if (s == NULL)
 		return (NULL);
-	ptr = (unsigned char*)s;
+	ptr = (char*)s;
 	i = 0;
-	p = (unsigned char*)malloc((len + 1) * sizeof(char));
-	if (p == NULL)
+	if ((p = (char*)malloc((len + 1) * sizeof(char))) == NULL)
 		return (NULL);
 	if (start < ft_strlen(s))
 	{
@@ -36,5 +35,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		}
 	}
 	p[i] = '\0';
-	return ((char*)p);
+	free((void*)s);
+	return (p);
 }

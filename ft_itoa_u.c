@@ -6,7 +6,7 @@
 /*   By: bamghoug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 10:02:38 by bamghoug          #+#    #+#             */
-/*   Updated: 2019/12/04 10:02:42 by bamghoug         ###   ########.fr       */
+/*   Updated: 2019/12/18 12:31:21 by bamghoug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*if_positive(unsigned int n)
 {
-	char	*c;
+	char			*c;
 	unsigned int	num;
-	int		i;
-	int		j;
+	int				i;
+	int				j;
 
 	num = n;
 	i = 0;
